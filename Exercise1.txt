@@ -1,0 +1,44 @@
+use database_feb20;
+
+create table semp(empno char(4), empname char(20), basic float(9,2), deptno  char(2),depthead char(4));
+
+CREATE TABLE SDEPT (DEPTNO CHAR(2), DEPTNAME CHAR(15));
+
+insert into sdept (deptno,deptname) values('10','Development');
+
+insert into sdept values('20','Training');
+
+insert into semp(empno,empname,basic,deptno) values ('0001','SUNIL',6000,10);
+
+insert into semp(empno,empname,basic,deptno) values ('0002','HIREN',8000,20);
+
+insert into semp(empno,empname,basic,deptno) values ('0003','ALI',10,0001);
+
+insert into semp(empno,empname,basic,deptno) values ('0001','GEORGE',6000,0002);
+select * from semp;
+
+create table supplier (`s#` char(10),sname varchar(10),status int(10),city varchar(10));
+create table parts(`p#`char(10), pname varchar(10),color varchar(10),weight int(10),city varchar(10));
+create table project(`j#` char(10),jname varchar(10),city varchar(10));
+create table spj(`s#` char(10),`p#`char(10), `j#`char(10), qty int(10));
+
+insert into supplier(`s#`,sname,status,city) values('s1','chinmay',10,'paris');
+insert into supplier(`s#`,sname,status,city) values('s2','harshada',20,'paris');
+insert into supplier(`s#`,sname,status,city) values('s3','sarita',30,'Athens');
+insert into supplier(`s#`,sname,status,city) values('s4','ramesh',10,'london');
+
+select * from supplier;
+select `s#` , sname from supplier;
+select * from supplier where city='london';
+select * from supplier where city='paris' or city='Athens';
+
+
+
+
+
+
+
+
+
+
+
