@@ -1,0 +1,46 @@
+use database_feb20;
+
+create table salepeople(snum int(4), sname varchar(10), city varchar(10),comm float(3,2));
+
+create table customers(cnum int(4), cname varchar(10), city varchar(10) , rating int(4), snum int(4));
+
+create table orders(onum int(4), amt float(7,2), odate date, cnum int(4), snum int(4));
+
+insert into salepeople(snum, sname,city,comm) values(1001,'Peel','London',.12);
+insert into salepeople(snum, sname,city,comm) values(1002,'Serres','San Jose',.13);
+insert into salepeople(snum, sname,city,comm) values(1007,'Rifkin','Barcelona',.15);
+insert into salepeople(snum, sname,city,comm) values(1003,'Axelrod','New York',.10);
+
+insert into customers (cnum,cname,city,rating,snum) values(2002,'Giovanni','Rome',200,1003);
+insert into customers (cnum,cname,city,rating,snum) values(2003,'Liu','San Jose',200,1002);
+insert into customers (cnum,cname,city,rating,snum) values(2004,'Grass','Berlin',300,1002);
+insert into customers (cnum,cname,city,rating,snum) values(2006,'Clemens','London',100,1001);
+insert into customers (cnum,cname,city,rating,snum) values(2008,'Cisneros','San Jose',300,1007);
+insert into customers (cnum,cname,city,rating,snum) values(2007,'Perira','Rome',100,1004);
+
+
+insert into orders (onum, amt, odate, cnum, snum) values(3001,18.69,'1990-10-03',2008,1007);
+insert into orders (onum, amt, odate, cnum, snum) values(3003,767.19,'1990-10-03',2001,1001);
+insert into orders (onum, amt, odate, cnum, snum) values(3002,1900.10,'1990-10-03',2007,1004);
+insert into orders (onum, amt, odate, cnum, snum) values(3005,5160.45,'1990-10-03',2003,1003);
+insert into orders (onum, amt, odate, cnum, snum) values(3006,1098.16,'1990-10-03',2008,1007);
+insert into orders (onum, amt, odate, cnum, snum) values(3009,1713.23,'1990-10-04',2002,1003);
+insert into orders (onum, amt, odate, cnum, snum) values(3007,75.75,'1990-10-04',2004,1002);
+insert into orders (onum, amt, odate, cnum, snum) values(3008,4723.00,'1990-10-05',2006,1001);
+insert into orders (onum, amt, odate, cnum, snum) values(3010,1309.95,'1990-10-06',2004,1002);
+insert into orders (onum, amt, odate, cnum, snum) values(3011,9891.88,'1990-10-06',2006,1001);
+
+select * from salepeople;
+select * from customers;
+select * from orders;
+
+
+
+
+
+
+
+
+
+
+
