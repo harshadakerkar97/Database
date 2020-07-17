@@ -1,0 +1,18 @@
+Assignment-02
+--------------------
+1) Which field of customers table is the primary key?
+ans-> cnum
+
+2) What is the 4th column of the Customers table?
+ans-> rating
+
+3) What is another word for row?For column?
+ans-> Row------ tuple, entity, opportunity
+         Column--  attribute, method
+
+4) Why isn't it possible to see the first five rows of a table?
+ans->  The rows are not store sequentially in the memory of database server hard disk. so at the time of searching rows it will search according to row address and according to the address rows will brought in server RAM hence it is not possible to see the first five rows of a table.  
+
+
+
+
