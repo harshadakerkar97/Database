@@ -41,6 +41,3 @@ select * from orders;
 
 
 
-
-
-
