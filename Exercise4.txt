@@ -1,0 +1,42 @@
+Exercise 4
+---------------
+1) Display the minimum status in the supplier table.
+ans -	 select min(status) from supplier;
+
+2) Display maximum weight in the parts table.
+ans -	select max(weight) from parts;
+
+3) Display average weight of the parts.
+ans -	select avg(weight) from parts;
+
+4) Display the total quantity sold for part 'p1';
+ans -	select sum(qty) from spj where `p#`='p1';
+
+5) Display the total quantity sold for each part.
+ans -	select sum(qty),`p#` from spj group by `p#`;
+
+6) Display average quantity sold for each part.
+ans -	select `p#`,avg(qty) from spj group by `p#`;
+
+7) Display the maximum quantity sold for each part, provided the maximum quantity is greater than 800.
+ans -	select `p#`,max(qty) from spj where qty>800 group by `p#`;
+
+8) Display status and count of suppliers with that status.
+ans -	select status,count(sname) from supplier group by status;
+
+
+9) Display count of projects going on in different cities.
+ans -	select city,count(jname) from project group by jname;
+
+10) What is differnce between count(status) and count(*) ?
+ans -	count(*) --	returns a count of all recordes.
+          count(status)---returns a count of all non- values.
+
+11) Display the status of count of suppliers with that status in following format as shown below-
+ans -	select status,count(sname) as count from supplier group by status;
+
+
+
+
+
+
