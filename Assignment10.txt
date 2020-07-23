@@ -10,10 +10,3 @@ ANS -	select cname,city,rating from customers
 	where rating = (select rating from customers where cname='hoffman');
 
 
-select status,count(sname),case when status = 10 then 'TEN'
-   when status = 20 then 'TWENTY'
-   when status = 30 then 'fourty'
-    when status = 30 then 'fifty'
-     else  'other'
-      end as 'StatusTex'
-     from supplier group by status;

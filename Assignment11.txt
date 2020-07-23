@@ -12,4 +12,7 @@ ANS -	select cname,rating from customers
 	(select avg(amt) from orders));
 
 3) Write a query that selects the total amount in orders for each salesperson for whom this total is greater than the amount of the largest order in the table.
-ANS -	select snum, sum(amt) from orders group by snum having sum(amt) > (select max(amt) from orders);
+ANS -	select snum, sum(amt) from orders 
+	group by snum 
+	having sum(amt) > (select max(amt) from orders);
+
